@@ -1,0 +1,116 @@
+\documentclass[12pt,a4paper]{elex2017}
+\usepackage[left=2.5cm,right=2.5cm,bottom=2.5cm,top=2.5cm]{geometry}
+\usepackage[english]{babel}
+\usepackage[T1]{fontenc}
+\usepackage[utf8]{inputenc}
+\usepackage[unicode=true]{hyperref}
+\usepackage{graphicx}
+\usepackage[
+    style=authoryear,
+    natbib=true,
+    defernumbers=true
+]{biblatex}
+\addbibresource{elex-ontolex.bib}
+
+\setcounter{secnumdepth}{3}
+\let\subparagraph\paragraph
+%\let\subparagraph\relax
+
+% numbering of sections, format of the title
+\makeatletter
+% we use \prefix@<level> only if it is defined
+\renewcommand{\@seccntformat}[1]{%
+  \ifcsname prefix@#1\endcsname
+    \csname prefix@#1\endcsname
+  \else
+    \csname the#1\endcsname\quad
+  \fi}
+\newcommand\prefix@section{\thesection. }
+\makeatother
+
+\setlength{\parindent}{0cm}
+\setlength{\parskip}{11pt plus 1pt minus 2pt}
+\setlength{\bibhang}{1cm}
+\setlength{\baselineskip}{16pt}
+
+%\pagestyle{empty}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% DOCUMENT BODY
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\begin{document}
+\mainmatter
+\title{The OntoLex-Lemon Model: development and applications}
+\titlerunning{The OntoLex-Lemon Model}
+\author{\bf John P. McCrae$^1$, Paul Buitelaar$^1$, Philipp Cimiano$^{2}$}
+\institute{$^1$Insight Centre for Data Analytics, National University of Ireland
+Galway\\ $^2$ Cognitive Interaction Technology Excellence Cluster, Bielefeld
+University\\
+E-mail: john@mccr.ae, paul.buitelaar@insight-centre.org,
+cimiano@cit-ec.uni-bielefeld.de}
+\toctitle{The OntoLex-Lemon Model: development and applications}
+
+\maketitle
+
+\begin{abstract}
+Each article must include an abstract of 150 to 200 words in Latin Modern Roman
+11 pt with interlinear spacing of 12 pt. The heading Abstract should be
+centered, font Times 10 bold. This short abstract will also be used for
+printing a Booklet of Abstracts containing the abstracts of all papers
+    presented at the Conference.~\cite{mccrae2009synonym}
+
+\keywords{provide 3--5 keywords, separated by semi-colons}
+\end{abstract}
+
+\section{Heading 1}
+
+\section{Acknowledgement} 
+
+Place all acknowledgements (including those concerning research grants and
+funding) in a separate section at the end of the article.
+
+\section{References}
+
+%\nocite{*}
+\printbibliography[
+    type={book},
+    notkeyword={dictionary},
+    title={Books}
+]
+\printbibliography[
+    type={incollection},
+    title={Book Sections}
+]
+\printbibliography[
+    type={inproceedings},
+    title={Paper in conference proceedings}
+]
+\printbibliography[
+    type={article},
+    title={Journal Articles}
+]
+\printbibliography[
+    type={misc},
+    title={Web Sites and Other Resources}
+]
+\printbibliography[
+    type={book},
+    keyword={dictionary},
+    title={Dictionaries}
+]
+
+
+\medskip
+\begin{minipage}[t]{\textwidth}
+    \noindent This work is licensed under the Creative Commons Attribution
+    ShareAlike 4.0 International License.
+    \vspace{-2ex}
+    \begin{center}%
+        \url{http://creativecommons.org/licenses/by-sa/4.0/}\linebreak
+        \includegraphics[width=2.33cm]{cc.png}%
+    \end{center}
+\end{minipage}
+
+\end{document}
+% vim: noai nocin nosi inde=:
