@@ -63,61 +63,97 @@ printing a Booklet of Abstracts containing the abstracts of all papers
 \keywords{provide 3--5 keywords, separated by semi-colons}
 \end{abstract}
 
-\section{Heading 1}
 
 % 25,000-50,000 Charcters = 8-15 pages
 
-The lemon Model, first proposed in~\cite{mccrae2012interchanging}, has become the primary
-model for the representation of lexical data on the Semantic Web and has been
-further developed in the context of the W3C OntoLex Community Group. In this
-paper we will present the development and future outlooks for this model as well
-as briefly detailing some of the current applications of the model. After the
-lemon model was developed in the context of the Monnet project, it was decided
-that the further development of this model should take place within a forum as
-open as possible, which fortunately coincided with the creation of community
-groups for W3C. The community group structure provided mailing lists and wikis
-for discussion of the model and eventually led to the publishing of the model as
-a W3C Report (\cite{cimiano2016lexicon}) and as files in the W3C namespace. The
-discussions within the group covered all aspects of the model, however the issue
-of semantics was of particular interest to the group and led to a major
-innovation in the introduction of a lexical concept, as a distinct element from
-the ontology reference. The formal distinction between these is that an ontology
-reference is an entity in an ontology, which the word denotes.  As such, the
-(ontological) meaning of  the question “When did Prince die?” could be
-understood with the ontology predicate deathDate as a reference, but the general
-concept of dying refers to an event rather than to a date. This also further
-extends the application domain of OntoLex-Lemon, from formal applications such
-as question answering and semantic parsing to the representation of general
-machine-readable dictionaries, including WordNet and digitized versions of
-existing dictionaries.
-Thus, the OntoLex-Lemon model has continued to expand in its use cases and we
-consider two particular cases here. Firstly, the OntoLex-Lemon model has been
-adopted in a variety of online dictionaries and this has provided a common
-interface to these dictionaries. This can be exploited to provide a single
-access point across multiple dictionaries that is implemented in the back-end by
-means of generic SPARQL (a Semantic Web version of SQL) queries. Secondly, we
-look at the application of OntoLex-Lemon in the context of the WordNet
-Collaborative Interlingual Index (\cite{bond2016cili}), where the model is being
-used to provide a single interlingual identifier for every concept in every
-language. The application of ontolex-lemon to these two cases will be discussed
-in detail at the eLex conference and in a final paper if our contribution is
-accepted.
-Finally, we consider the future of the OntoLex-Lemon model, which we intend to
-continue to develop and have recently identified four areas for extension:
-increasing support for use cases of the model in representing digitized
-dictionaries, the use of clear and defined data categories to improve
-interoperability, the development of a module for representing complex
-morphological patterns and finally an extension to support the representation of
-diachronic and etymological information within the lexicon. These developments
-should further increase the applicability and value of the model to more users.
+%The lemon Model, first proposed in~\cite{mccrae2012interchanging}, has become the primary
+%model for the representation of lexical data on the Semantic Web and has been
+%further developed in the context of the W3C OntoLex Community Group. In this
+%paper we will present the development and future outlooks for this model as well
+%as briefly detailing some of the current applications of the model. After the
+%lemon model was developed in the context of the Monnet project, it was decided
+%that the further development of this model should take place within a forum as
+%open as possible, which fortunately coincided with the creation of community
+%groups for W3C. The community group structure provided mailing lists and wikis
+%for discussion of the model and eventually led to the publishing of the model as
+%a W3C Report (\cite{cimiano2016lexicon}) and as files in the W3C namespace. The
+%discussions within the group covered all aspects of the model, however the issue
+%of semantics was of particular interest to the group and led to a major
+%innovation in the introduction of a lexical concept, as a distinct element from
+%the ontology reference. The formal distinction between these is that an ontology
+%reference is an entity in an ontology, which the word denotes.  As such, the
+%(ontological) meaning of  the question “When did Prince die?” could be
+%understood with the ontology predicate deathDate as a reference, but the general
+%concept of dying refers to an event rather than to a date. This also further
+%extends the application domain of OntoLex-Lemon, from formal applications such
+%as question answering and semantic parsing to the representation of general
+%machine-readable dictionaries, including WordNet and digitized versions of
+%existing dictionaries.
+%Thus, the OntoLex-Lemon model has continued to expand in its use cases and we
+%consider two particular cases here. Firstly, the OntoLex-Lemon model has been
+%adopted in a variety of online dictionaries and this has provided a common
+%interface to these dictionaries. This can be exploited to provide a single
+%access point across multiple dictionaries that is implemented in the back-end by
+%means of generic SPARQL (a Semantic Web version of SQL) queries. Secondly, we
+%look at the application of OntoLex-Lemon in the context of the WordNet
+%Collaborative Interlingual Index (\cite{bond2016cili}), where the model is being
+%used to provide a single interlingual identifier for every concept in every
+%language. The application of ontolex-lemon to these two cases will be discussed
+%in detail at the eLex conference and in a final paper if our contribution is
+%accepted.
+%Finally, we consider the future of the OntoLex-Lemon model, which we intend to
+%continue to develop and have recently identified four areas for extension:
+%increasing support for use cases of the model in representing digitized
+%dictionaries, the use of clear and defined data categories to improve
+%interoperability, the development of a module for representing complex
+%morphological patterns and finally an extension to support the representation of
+%diachronic and etymological information within the lexicon. These developments
+%should further increase the applicability and value of the model to more users.
 
+\section{Introduction}
 
-\section{Acknowledgement} 
+Ontologies have become an increasingly important way of modelling domains and
+representing data in a variety of forms, most notably the Semantic Web. However
+the existing standards for ontologies, most notably the Web Ontology
+Language~\cite[OWL]{mcguinness2004ow}, provide little support for the
+representing information about how a word is expressed in language, beyond a
+simple string. In order to close this gap, the \emph{lemon}
+Model~\cite{mccrae2012interchanging} was proposed, which created a separate
+lexicon that could describe how an ontological concept was lexicalized in more
+details. This builds on the paradigm of the ontology-lexicon interface, whereby
+the link between how a concept is expressed in natural language and the formal
+description of the concept in the ontology is kept separated. This has several
+advantages, most notably in that by separating the ontological and the lexical
+layer we can easily switch an ontology from one language to another by changing
+its lexicon. 
+
+The \emph{lemon} Model was adopted by a number of projects~\cite{todo} and
+several authors have proposed modifications, improvements or changes~\cite{todo}
+to the model. In order to accommodate these changes, it was decided that the
+model should be further developed under an open forum and for this purpose the
+authors of this paper founded the OntoLex Community Group. This group was part
+of the World Wide Web Consortium's Business and Community group program.
+
+\section{The OntoLex Community Group}
+
+\section{The OntoLex Model}
+
+\section{Use cases}
+
+\subsection{Representing dictionaries with OntoLex}
+
+\subsection{The Collaborative Interlingual Index}
+
+\section{Extensions and Future Plans}
+
+\section{Conclusion}
+
+\section*{Acknowledgement} 
 
 Place all acknowledgements (including those concerning research grants and
 funding) in a separate section at the end of the article.
 
-\section{References}
+\section*{References}
 
 %\nocite{*}
 \printbibliography[
@@ -138,12 +174,8 @@ funding) in a separate section at the end of the article.
     title={Journal Articles}
 ]
 \printbibliography[
-    type={techreport},
-    title={Technical Reports}
-]
-\printbibliography[
     type={misc},
-    title={Web Sites and Other Resources}
+    title={Technical Reports}
 ]
 \printbibliography[
     type={book},
