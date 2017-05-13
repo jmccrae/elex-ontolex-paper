@@ -1,0 +1,161 @@
+% $ biblatex auxiliary file $
+% $ biblatex bbl format version 2.4 $
+% Do not modify the above lines!
+%
+% This is an auxiliary file used by the 'biblatex' package.
+% This file may safely be deleted. It will be recreated by
+% biber as required.
+%
+\begingroup
+\makeatletter
+\@ifundefined{ver@biblatex.sty}
+  {\@latex@error
+     {Missing 'biblatex' package}
+     {The bibliography requires the 'biblatex' package.}
+      \aftergroup\endinput}
+  {}
+\endgroup
+
+
+\refsection{0}
+  \sortlist{nyt}{nyt}
+    \entry{bond2016cili}{inproceedings}{}
+      \name{labelname}{4}{}{%
+        {{uniquename=0,hash=1f178bd9688360ca29fffa6bbcdb1aa5}{Bond}{B\bibinitperiod}{Francis}{F\bibinitperiod}{}{}{}{}}%
+        {{uniquename=0,hash=880e64dada21b83dc9658f06dc6a694c}{Vossen}{V\bibinitperiod}{Piek}{P\bibinitperiod}{}{}{}{}}%
+        {{uniquename=0,hash=61617537efedcae775fd9913234bdc52}{McCrae}{M\bibinitperiod}{John\bibnamedelima P.}{J\bibinitperiod\bibinitdelim P\bibinitperiod}{}{}{}{}}%
+        {{uniquename=0,hash=34ede4192dcababa339fd9e0e9c1df7d}{Fellbaum}{F\bibinitperiod}{Christiane}{C\bibinitperiod}{}{}{}{}}%
+      }
+      \name{author}{4}{}{%
+        {{uniquename=0,hash=1f178bd9688360ca29fffa6bbcdb1aa5}{Bond}{B\bibinitperiod}{Francis}{F\bibinitperiod}{}{}{}{}}%
+        {{uniquename=0,hash=880e64dada21b83dc9658f06dc6a694c}{Vossen}{V\bibinitperiod}{Piek}{P\bibinitperiod}{}{}{}{}}%
+        {{uniquename=0,hash=61617537efedcae775fd9913234bdc52}{McCrae}{M\bibinitperiod}{John\bibnamedelima P.}{J\bibinitperiod\bibinitdelim P\bibinitperiod}{}{}{}{}}%
+        {{uniquename=0,hash=34ede4192dcababa339fd9e0e9c1df7d}{Fellbaum}{F\bibinitperiod}{Christiane}{C\bibinitperiod}{}{}{}{}}%
+      }
+      \strng{namehash}{f03b7a455a83d9115e3df2bada19e9a2}
+      \strng{fullhash}{b8f43384cded07d182ecd0dde15428f5}
+      \field{sortinit}{B}
+      \field{sortinithash}{1a3a21dbed09540af12d49a0b14f4751}
+      \field{labelyear}{2016}
+      \field{datelabelsource}{}
+      \field{labeltitle}{{CILI: the Collaborative Interlingual Index}}
+      \field{booktitle}{Proceedings of the Global WordNet Conference 2016}
+      \field{title}{{CILI: the Collaborative Interlingual Index}}
+      \field{year}{2016}
+      \verb{url}
+      \verb https://www.overleaf.com/read/rsnvsbdghybg
+      \endverb
+    \endentry
+    \entry{cimiano2016lexicon}{misc}{}
+      \name{labelname}{3}{}{%
+        {{uniquename=0,hash=42843da8f88197b42fb1e9df5f0ad5d5}{Cimiano}{C\bibinitperiod}{Philipp}{P\bibinitperiod}{}{}{}{}}%
+        {{uniquename=1,hash=61617537efedcae775fd9913234bdc52}{McCrae}{M\bibinitperiod}{John\bibnamedelima P.}{J\bibinitperiod\bibinitdelim P\bibinitperiod}{}{}{}{}}%
+        {{uniquename=0,hash=04cb4f2ce7c00466a678941aef7dab90}{Buitelaar}{B\bibinitperiod}{Paul}{P\bibinitperiod}{}{}{}{}}%
+      }
+      \name{author}{3}{}{%
+        {{uniquename=0,hash=42843da8f88197b42fb1e9df5f0ad5d5}{Cimiano}{C\bibinitperiod}{Philipp}{P\bibinitperiod}{}{}{}{}}%
+        {{uniquename=1,hash=61617537efedcae775fd9913234bdc52}{McCrae}{M\bibinitperiod}{John\bibnamedelima P.}{J\bibinitperiod\bibinitdelim P\bibinitperiod}{}{}{}{}}%
+        {{uniquename=0,hash=04cb4f2ce7c00466a678941aef7dab90}{Buitelaar}{B\bibinitperiod}{Paul}{P\bibinitperiod}{}{}{}{}}%
+      }
+      \strng{namehash}{efbf0504aeaabda19817d79ad98b8ecc}
+      \strng{fullhash}{efbf0504aeaabda19817d79ad98b8ecc}
+      \field{sortinit}{C}
+      \field{sortinithash}{dd0e4ddd17488a6ebf12cd6de2f2c237}
+      \field{labelyear}{2016}
+      \field{datelabelsource}{}
+      \field{labeltitle}{{Lexicon Model for Ontologies: Community Report}}
+      \field{howpublished}{{W3C} Community Group Final Report}
+      \field{title}{{Lexicon Model for Ontologies: Community Report}}
+      \field{year}{2016}
+    \endentry
+    \entry{mccrae2012interchanging}{article}{}
+      \name{labelname}{11}{}{%
+        {{uniquename=1,hash=5a9e6a228beb79b7f4714dc5a66de34e}{McCrae}{M\bibinitperiod}{John}{J\bibinitperiod}{}{}{}{}}%
+        {{uniquename=0,hash=67e0ec6acc089b72963471d74dcc5578}{Aguado-de-Cea}{A\bibinithyphendelim C\bibinitperiod}{Guadalupe}{G\bibinitperiod}{}{}{}{}}%
+        {{uniquename=0,hash=04cb4f2ce7c00466a678941aef7dab90}{Buitelaar}{B\bibinitperiod}{Paul}{P\bibinitperiod}{}{}{}{}}%
+        {{uniquename=0,hash=42843da8f88197b42fb1e9df5f0ad5d5}{Cimiano}{C\bibinitperiod}{Philipp}{P\bibinitperiod}{}{}{}{}}%
+        {{uniquename=0,hash=aa314aaff9cde7c75dd1dbefb7df9aee}{Declerck}{D\bibinitperiod}{Thierry}{T\bibinitperiod}{}{}{}{}}%
+        {{uniquename=0,hash=28ce9eba3995ba8c729d40aa43e9d303}{Gómez-Pérez}{G\bibinithyphendelim P\bibinitperiod}{Asunción}{A\bibinitperiod}{}{}{}{}}%
+        {{uniquename=0,hash=96c0715e3731225b24686800c361f90a}{Gracia}{G\bibinitperiod}{Jorge}{J\bibinitperiod}{}{}{}{}}%
+        {{uniquename=0,hash=17775f39c44df38359785e023f4708ac}{Hollink}{H\bibinitperiod}{Laura}{L\bibinitperiod}{}{}{}{}}%
+        {{uniquename=0,hash=ec1d43477bf3f9427bdaca4d7c56a45f}{Montiel-Ponsoda}{M\bibinithyphendelim P\bibinitperiod}{Elena}{E\bibinitperiod}{}{}{}{}}%
+        {{uniquename=0,hash=9b2f545bb73242350df2dce5f6f1902f}{Spohr}{S\bibinitperiod}{Dennis}{D\bibinitperiod}{}{}{}{}}%
+        {{uniquename=0,hash=2eeca09c17e312f6ad00e124f9f08933}{Wunner}{W\bibinitperiod}{Tobias}{T\bibinitperiod}{}{}{}{}}%
+      }
+      \name{author}{11}{}{%
+        {{uniquename=1,hash=5a9e6a228beb79b7f4714dc5a66de34e}{McCrae}{M\bibinitperiod}{John}{J\bibinitperiod}{}{}{}{}}%
+        {{uniquename=0,hash=67e0ec6acc089b72963471d74dcc5578}{Aguado-de-Cea}{A\bibinithyphendelim C\bibinitperiod}{Guadalupe}{G\bibinitperiod}{}{}{}{}}%
+        {{uniquename=0,hash=04cb4f2ce7c00466a678941aef7dab90}{Buitelaar}{B\bibinitperiod}{Paul}{P\bibinitperiod}{}{}{}{}}%
+        {{uniquename=0,hash=42843da8f88197b42fb1e9df5f0ad5d5}{Cimiano}{C\bibinitperiod}{Philipp}{P\bibinitperiod}{}{}{}{}}%
+        {{uniquename=0,hash=aa314aaff9cde7c75dd1dbefb7df9aee}{Declerck}{D\bibinitperiod}{Thierry}{T\bibinitperiod}{}{}{}{}}%
+        {{uniquename=0,hash=28ce9eba3995ba8c729d40aa43e9d303}{Gómez-Pérez}{G\bibinithyphendelim P\bibinitperiod}{Asunción}{A\bibinitperiod}{}{}{}{}}%
+        {{uniquename=0,hash=96c0715e3731225b24686800c361f90a}{Gracia}{G\bibinitperiod}{Jorge}{J\bibinitperiod}{}{}{}{}}%
+        {{uniquename=0,hash=17775f39c44df38359785e023f4708ac}{Hollink}{H\bibinitperiod}{Laura}{L\bibinitperiod}{}{}{}{}}%
+        {{uniquename=0,hash=ec1d43477bf3f9427bdaca4d7c56a45f}{Montiel-Ponsoda}{M\bibinithyphendelim P\bibinitperiod}{Elena}{E\bibinitperiod}{}{}{}{}}%
+        {{uniquename=0,hash=9b2f545bb73242350df2dce5f6f1902f}{Spohr}{S\bibinitperiod}{Dennis}{D\bibinitperiod}{}{}{}{}}%
+        {{uniquename=0,hash=2eeca09c17e312f6ad00e124f9f08933}{Wunner}{W\bibinitperiod}{Tobias}{T\bibinitperiod}{}{}{}{}}%
+      }
+      \strng{namehash}{1210cb041bcb905a64972b8ef5f7a6e1}
+      \strng{fullhash}{2a1db71d9cab206fd0fc2427cd6922a5}
+      \field{sortinit}{M}
+      \field{sortinithash}{4203d16473bc940d4ac780773cb7c5dd}
+      \field{labelyear}{2012}
+      \field{datelabelsource}{}
+      \field{labeltitle}{{Interchanging lexical resources on the Semantic Web}}
+      \field{journaltitle}{Language Resources and Evaluation}
+      \field{number}{6}
+      \field{title}{{Interchanging lexical resources on the Semantic Web}}
+      \field{volume}{46}
+      \field{year}{2012}
+      \field{pages}{701\bibrangedash 709}
+    \endentry
+    \entry{mcguinness2004ow}{misc}{}
+      \name{labelname}{2}{}{%
+        {{uniquename=0,hash=00cd80e24d8af3fe991c11a25c03c97d}{McGuinness}{M\bibinitperiod}{Deborah\bibnamedelima L.}{D\bibinitperiod\bibinitdelim L\bibinitperiod}{}{}{}{}}%
+        {{uniquename=0,hash=ee480b6d2fd2c627ffb033d94c9691af}{Harmelen}{H\bibinitperiod}{Frank}{F\bibinitperiod}{van}{v\bibinitperiod}{}{}}%
+      }
+      \name{author}{2}{}{%
+        {{uniquename=0,hash=00cd80e24d8af3fe991c11a25c03c97d}{McGuinness}{M\bibinitperiod}{Deborah\bibnamedelima L.}{D\bibinitperiod\bibinitdelim L\bibinitperiod}{}{}{}{}}%
+        {{uniquename=0,hash=ee480b6d2fd2c627ffb033d94c9691af}{Harmelen}{H\bibinitperiod}{Frank}{F\bibinitperiod}{van}{v\bibinitperiod}{}{}}%
+      }
+      \strng{namehash}{31636ba543518082fb68db7f0ca23d48}
+      \strng{fullhash}{31636ba543518082fb68db7f0ca23d48}
+      \field{sortinit}{M}
+      \field{sortinithash}{4203d16473bc940d4ac780773cb7c5dd}
+      \field{labelyear}{2004}
+      \field{datelabelsource}{}
+      \field{labeltitle}{{OWL Web Ontology Language Overview}}
+      \field{howpublished}{W3C Recommendation}
+      \field{title}{{OWL Web Ontology Language Overview}}
+      \field{year}{2004}
+    \endentry
+    \entry{vossen2016toward}{inproceedings}{}
+      \name{labelname}{3}{}{%
+        {{uniquename=0,hash=880e64dada21b83dc9658f06dc6a694c}{Vossen}{V\bibinitperiod}{Piek}{P\bibinitperiod}{}{}{}{}}%
+        {{uniquename=0,hash=1f178bd9688360ca29fffa6bbcdb1aa5}{Bond}{B\bibinitperiod}{Francis}{F\bibinitperiod}{}{}{}{}}%
+        {{uniquename=1,hash=61617537efedcae775fd9913234bdc52}{McCrae}{M\bibinitperiod}{John\bibnamedelima P.}{J\bibinitperiod\bibinitdelim P\bibinitperiod}{}{}{}{}}%
+      }
+      \name{author}{3}{}{%
+        {{uniquename=0,hash=880e64dada21b83dc9658f06dc6a694c}{Vossen}{V\bibinitperiod}{Piek}{P\bibinitperiod}{}{}{}{}}%
+        {{uniquename=0,hash=1f178bd9688360ca29fffa6bbcdb1aa5}{Bond}{B\bibinitperiod}{Francis}{F\bibinitperiod}{}{}{}{}}%
+        {{uniquename=1,hash=61617537efedcae775fd9913234bdc52}{McCrae}{M\bibinitperiod}{John\bibnamedelima P.}{J\bibinitperiod\bibinitdelim P\bibinitperiod}{}{}{}{}}%
+      }
+      \strng{namehash}{a7d3bda03b48f585088a9459f0f166ab}
+      \strng{fullhash}{a7d3bda03b48f585088a9459f0f166ab}
+      \field{sortinit}{V}
+      \field{sortinithash}{63562d1af2cd68fb37e2e14e0c6d5c96}
+      \field{labelyear}{2016}
+      \field{datelabelsource}{}
+      \field{labeltitle}{{Toward a truly multilingual Global Wordnet Grid}}
+      \field{booktitle}{Proceedings of the Global WordNet Conference 2016}
+      \field{title}{{Toward a truly multilingual Global Wordnet Grid}}
+      \field{year}{2016}
+      \verb{url}
+      \verb https://www.overleaf.com/read/fwhzzvrrwrmw
+      \endverb
+    \endentry
+  \endsortlist
+  \missing{todo}
+\endrefsection
+\endinput
+
