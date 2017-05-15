@@ -127,8 +127,10 @@ advantages, most notably in that by separating the ontological and the lexical
 layer we can easily switch an ontology from one language to another by changing
 its lexicon. 
 
-The \emph{lemon} Model was adopted by a number of projects~\cite{todo} and
-several authors have proposed modifications, improvements or changes~\cite{todo}
+The \emph{lemon} Model was adopted by a number of
+projects~\citep{navigli2012babelnet,serasset2015dbnary,ecklekohler2015} and
+several authors have proposed modifications, improvements or
+changes~\citep{khan2014using,chavula2014lemon,bosque2016linked}
 to the model. In order to accommodate these changes, it was decided that the
 model should be further developed under an open forum and for this purpose the
 authors of this paper founded the OntoLex Community Group. This group was part
@@ -171,7 +173,7 @@ that it was assumed that all applications of the model would use and then in the
 second stage, four extra modules were defined: Syntax and Semantics,
 Decomposition, Variation and Translation, and Metadata (Lime).
 Finally each of these models were combined and documented in a final
-specification that was published by the W3C~\cite{cimiano2016lexicon} along with
+specification that was published by the W3C (\cite{cimiano2016lexicon}) along with
 technical model files in OWL.
 
 One significant difference in the creation of this standard, in contrast to the
@@ -188,7 +190,9 @@ accessible to anyone.
 \section{The OntoLex Model}
 
 \begin{figure}
-\includegraphics[width=0.8\textwidth]{Lemon_OntoLex_Core.png}
+    \begin{center}
+\includegraphics[width=0.8\textwidth]{LemonOntoLexCore.pdf}
+    \end{center}
 \caption{\label{fig:core}The Core Lemon OntoLex Model}
 \end{figure}
 
@@ -212,18 +216,210 @@ register), which is annotated on the lexical sense showing its role in giving a
 mapping between concepts.
 
 
+In addition to the core, there are four modules defined by the specification:
+
+\begin{description}
+    \item[Syntax and Semantics] The syntax and semantics module describes how
+        particular lexical constructs, e.g., verb frames, can be mapped to
+        constructs in the ontology. As a simple example, this concerns how a
+        transitive verb frame such as `X knows Y' can be mapped to the subject
+        and object arguments of a property such as \texttt{A foaf:knows B}. In this
+        case there are only two options based on whether the grammatical subject
+        (X) refers to property's subject (A) or object (B), however more complex
+        multi-argument structures are also possible.
+    \item[Decomposition] The decomposition module allows for multiword lexical
+        entries to be decomposed into individual words, which are also
+        represented as \emph{components}. Components are allowed to be marked
+        with their own grammatical properties and are said to \emph{correspond
+        to} either a lexical entry (i.e., for the word), an argument in a frame
+        or another frame (to model phrasal arguments). 
+    \item[Variation and Translation] The variation and translation model
+        represents relationships between words at three levels: (purely)
+        lexical, sense (lexico-semantic) and conceptual. These correspond
+        to the levels of the model, with lexical relations being between lexical
+        entries and such do not consider the meaning of a word and only its
+        syntactic properties, similarly a conceptual relationship is between a
+        lexical conceptual and does not consider the lexical form and hence
+        language of a relation. Finally, sense relations required knowledge of
+        both the word form and the meaning and translation is thus considered a
+        special case of a sense relation. The module also allows technical
+        modelling of a relation either as a single triple or as a
+        dereferenceable entity in itself, which allows for further annotation of
+        metadata about the link.
+    \item[Metadata (LIME)] The Linguistic Metadata (LIME) module adds modelling
+        for grouping sets of lexical entries together into a lexicon and
+        providing simple metadata such as the number of entries, senses, etc.
+        Note that as linked data is intended to be published on the Web together
+        the necessity to have all words grouped into a lexicon is not considered
+        a core but still a useful feature.
+\end{description}
 
 \section{Use cases}
 
 \subsection{Representing dictionaries with OntoLex}
 
+\textbf{Julia?}
+
 \subsection{The Collaborative Interlingual Index}
+
+Princeton WordNet (PWN, \cite{fellbaum2010wordnet}) is the most widely used
+lexicographic resource for natural language processing, but yet is only
+available for English. There have been many versions of wordnets for other
+langauges and these have been collected together in the Open Multilingual
+WordNet~\citep{bond2013linking}, however they have primarily been created by the
+\emph{extend approach}, where existing synsets from Princeton WordNet have been
+translated and then new synsets are added for words which do not exist in
+English. Unfortunately, this has led to a degree of fragmentation, where certain
+concepts may be independently defined by different wordnets. In order to fix
+this issue, it has been proposed that all wordnets contribute to a single index
+of concepts~\citep{pease2008building}. This has recently been realized by the
+Collaborative Interlingual Index (CILI, \cite{bond2016cili}), in which all
+wordnets are converted to a common format and linking is made between the
+synsets. In order to do this, it is assumed that each concept must have both an
+English definition and a link to a synset already defined in the CILI. 
+
+\begin{figure}
+    \footnotesize
+    \begin{verbatim}
+{ 
+  "@context": "http://globalwordnet.github.io/schemas/wn-json-context-1.0.json",
+    "@graph": [{
+      "@context": { "@language": "en" },
+      "@id": "example-en",
+      "@type": "ontolex:Lexicon", 
+      "label": "Example wordnet (English)",
+      "language": "en",
+      "email": "john@mccr.ae",
+      "rights": "https://creativecommons.org/publicdomain/zero/1.0/",
+      "version": "1.0",
+      "entry": [{
+          "@id": "w1",
+          "lemma": { "writtenForm": "grandfather" },
+          "partOfSpeech": "noun",
+          "sense": [{
+              "@id": "example-en-10161911-n-1",
+              "synset": "example-en-10161911-n"
+          }]
+      }],
+      "synset": [{
+          "@id": "example-en-10161911-n",
+          "ili": "i90287",
+          "partOfSpeech": "noun",
+          "definition": [{
+              "gloss": "the father of your father or mother"
+          }],
+          "relations": [{
+              "relType": "hypernym",
+              "target": "example-en-10162692-n"
+          }]
+      }]
+  }]
+}
+    \end{verbatim}
+    \caption{\label{fig:json-example}An example WordNet in the Global WordNet
+    JSON-LD format}
+\end{figure}
+
+
+
+In order to, implement this it has been necessary to define a common format for
+the definition of
+wordnets\footnote{\url{https://globalwordnet.github.io/schemas}}. This format
+allows for three forms: XML, JSON and RDF, all of which can be converted without
+any loss of information. The XML format is based on the existing Lexical Markup
+Framework~\citep{francopoulo2006lexical} and in particular on the WordNet-LMF
+variant~\cite{soria2009wordnet}. Both the JSON and RDF formats are based on this
+OntoLex model described in this paper, and the RDF version of this format is
+considered a limited \emph{profile} of the OntoLex model, suited particularly
+for the case of representing wordnets. The JSON version more precisely defines
+its semantics by means of a JSON-LD context~\citep{sporny2014json}. An example
+of this is given in Figure~\ref{fig:json-example}, in which the term
+``grandfather'' is defined. In this example, a number of required standard
+metadata properties are defined using widely-used vocabularies, namely Dublin
+Core~\citep{rfc2413} and
+Schema.org\footnote{\url{https://webmasters.googleblog.com/2011/06/introducing-schemaorg-search-engines.html}}.
+Then the file contains two sections \texttt{entry} and \texttt{synset}, which
+define the \emph{lexical entries} and \emph{lexical concepts} in this lexicon.
+They both have a part-of-speech property, with specific values defined in a
+custom WordNet
+ontology\footnote{\url{http://globalwordnet.github.io/schemas/wn}}. The senses
+of the model correspond to the \emph{lexical senses} of the OntoLex
+model. For synset and sense relations the variation modules is used that enables
+relationships between senses to be further described with metadata.
+
+\textbf{The ILI as Linked Data}
 
 \section{Extensions and Future Plans}
 
+The OntoLex Community Group released its ``final report'' on the
+10\textsuperscript{th} May 2016,
+however the work of the group has not yet stopped and the group has an ambition
+to develop more models in response to critical analysis and novel uses case
+(such as \cite{chavula2014lemon}). In particular, the group has recently aimed
+to develop four new modules in order to further extend the applicability of the
+model.
+
+\begin{description}
+    \item[Morphology] The first \emph{lemon} proposal contained a module for
+        ``inflectional and agglutantive morphology'', which primarily defined
+        morphological processes by means of regular expressions. This
+        methodology was very simple to implement in any programming language
+        that support Perl-like regular expressions, however does not very
+        accurately represent the phonological process that occur in word
+        morphology. As such, under this model certain regular cases like the
+        plural of `leaf' to `leaves' would be modelled as distinct morphological
+        paradigms even though it is clearly part of the normal paradigm of
+        pluralization in English. Thus the original model was made available as
+        a standalone ontology called LIAM (Lemon Inflectional Agglutinative
+        Morphology)\footnote{\url{http://lemon-model.net/liam}}. There have
+        since been a number of new proposals for morphology and in particular
+        the group is discussing the adoption of the MMoOn Ontology of
+        \cite{MMoOn_heb}.
+    \item[Lexicography] \textbf{Jorge?}
+    \item[Etymology and Diachronicity] Some authors~\citep{khan2014using,abromeit2016linking} have
+        proposed using the OntoLex model to represent dictionaries of historical
+        languages, and moreover most dictionaries contain etymological
+        information. As such, the ability of a dictionary to represent the
+        change of lexical items over time is important. As such, it has been
+        recognized that the development of a module to capture meaning of words
+        over time is a key use case of the model.
+    \item[Lexico-syntactic categories] The OntoLex Model follows a principle of
+        avoiding prescriptive modelling, for example allowing individual models
+        to define their own categories. This is helpful as in the example
+        of part-of-speech values in wordnets discussed above, where this
+        approach allows the resource to define categories that may not be
+        accepted by other lexicographers\footnote{In particular, Princeton
+        WordNet defines `adjective satellite' as a distinct category to
+        `adjective'}. However, the definition of standard categories greatly
+        helps interoperability between resources and the LexInfo
+        ontology~\citep{cimiano2011lexinfo} has been used by a number of authors
+        for this purpose. This resource, originally derived from the
+        ISOcat~\citep{kemps2008isocat} categories, is currently maintained as a
+        single OWL file. As such, the group aims to re-evaluate this model and
+        add establish a procedure for adding new categories to a single
+        ontology. This will still only be advisory and we still expect
+        particular communities to define their own ontologies.
+\end{description}
+
 \section{Conclusion}
 
+The OntoLex Model has been developed under an open process and as such
+represents on the most significant open models for the representation of
+electronic lexicographic resources. While the model as proposed has remained
+close to the proposal of \cite{mccrae2012interchanging}, it has also
+significantly innovated in order to allow new use cases. In particular, the
+application of the model beyond the Semantic Web community has required new
+modelling, in particular the introduction of \emph{lexical concepts} and
+dereferenceable relations. These developments have seen the model adapted in a
+wider community and as such have consequently lead to requests for new features.
+The group remains committed to developing the model and new use cases in
+morphology and diachronic lexicography will further show the flexibility of this
+linked data based model.
+
 \section*{Acknowledgement} 
+
+We would like to thank all members of the OntoLex group for their contributions
+and discussion of the model.
 
 Place all acknowledgements (including those concerning research grants and
 funding) in a separate section at the end of the article.
