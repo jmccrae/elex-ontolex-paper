@@ -192,6 +192,25 @@ accessible to anyone.
 \caption{\label{fig:core}The Core Lemon OntoLex Model}
 \end{figure}
 
+The Lemon OntoLex model is based around the core module, as depicted in
+Figure~\ref{fig:core}. The primary element of this is the \emph{lexical entry}
+which represents a single word and thus collects together all morphological
+expressions of that word, which correspond to \emph{forms} in the model, and all
+possible concepts in the ontology it can refer to, which correspond to
+\emph{lexical senses} in the model. It is important to note that the actual
+meaning of a word is given by reference to an ontological concept and
+\emph{lexical senses} represent only the mapping from a word to a concept. In
+contrast to the previous lemon model, a third semantic element called the
+\emph{lexical concept} was introduced that allows for a meaning to be defined
+independently of an ontology. For example, the verb `to die' may refer to
+ontological properties such as \texttt{deathDate} and \texttt{deathPlace} while
+still referring to a single concept of \emph{Dying}. The model also supports
+some other features including marking the canonical form (lemma), whether an
+expression is a multiword expression and giving a \emph{usage} condition
+describing when a particular word expresses a given concept (for example the
+register), which is annotated on the lexical sense showing its role in giving a
+mapping between concepts.
+
 
 
 \section{Use cases}
