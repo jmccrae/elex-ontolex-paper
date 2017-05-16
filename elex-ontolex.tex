@@ -54,71 +54,44 @@ cimiano@cit-ec.uni-bielefeld.de}
 \maketitle
 
 \begin{abstract}
-Each article must include an abstract of 150 to 200 words in Latin Modern Roman
-11 pt with interlinear spacing of 12 pt. The heading Abstract should be
-centered, font Times 10 bold. This short abstract will also be used for
-printing a Booklet of Abstracts containing the abstracts of all papers
-    presented at the Conference.
+The lemon Model has become the primary
+model for the representation of lexical data on the Semantic Web and has been
+further developed in the context of the W3C OntoLex Community Group to the new
+    Lemon OntoLex Model.
+We describe the development and future outlooks for this model as well
+as briefly detailing some of the current applications of the model. 
+The community group structure provided mailing lists and wikis
+for discussion of the model and eventually led to the publishing of the model as
+a W3C Report. This model has improved on the model in the representation of
+    semantics by the introduction of the lexical concept, which
+further
+extends the application domain of OntoLex-Lemon, from formal applications such
+as question answering and semantic parsing to the representation of general
+machine-readable dictionaries, including WordNet and digitized versions of
+existing dictionaries.
 
-\keywords{provide 3--5 keywords, separated by semi-colons}
+We look at two use cases of the Lemon OntoLex model in representing dictionaries
+and in the WordNet Collaborative Interlingual Index.
+Finally, we consider the future of the OntoLex-Lemon model, which we intend to
+continue to develop and have recently identified areas that
+increase the applicability and value of the model to more users.
+
+\keywords{linked data; lexicography; ontologies; Semantic Web; ontology-lexicon
+    interface}
 \end{abstract}
 
 
 % 25,000-50,000 Charcters = 8-15 pages
 
-%The lemon Model, first proposed in~\cite{mccrae2012interchanging}, has become the primary
-%model for the representation of lexical data on the Semantic Web and has been
-%further developed in the context of the W3C OntoLex Community Group. In this
-%paper we will present the development and future outlooks for this model as well
-%as briefly detailing some of the current applications of the model. After the
-%lemon model was developed in the context of the Monnet project, it was decided
-%that the further development of this model should take place within a forum as
-%open as possible, which fortunately coincided with the creation of community
-%groups for W3C. The community group structure provided mailing lists and wikis
-%for discussion of the model and eventually led to the publishing of the model as
-%a W3C Report (\cite{cimiano2016lexicon}) and as files in the W3C namespace. The
-%discussions within the group covered all aspects of the model, however the issue
-%of semantics was of particular interest to the group and led to a major
-%innovation in the introduction of a lexical concept, as a distinct element from
-%the ontology reference. The formal distinction between these is that an ontology
-%reference is an entity in an ontology, which the word denotes.  As such, the
-%(ontological) meaning of  the question “When did Prince die?” could be
-%understood with the ontology predicate deathDate as a reference, but the general
-%concept of dying refers to an event rather than to a date. This also further
-%extends the application domain of OntoLex-Lemon, from formal applications such
-%as question answering and semantic parsing to the representation of general
-%machine-readable dictionaries, including WordNet and digitized versions of
-%existing dictionaries.
-%Thus, the OntoLex-Lemon model has continued to expand in its use cases and we
-%consider two particular cases here. Firstly, the OntoLex-Lemon model has been
-%adopted in a variety of online dictionaries and this has provided a common
-%interface to these dictionaries. This can be exploited to provide a single
-%access point across multiple dictionaries that is implemented in the back-end by
-%means of generic SPARQL (a Semantic Web version of SQL) queries. Secondly, we
-%look at the application of OntoLex-Lemon in the context of the WordNet
-%Collaborative Interlingual Index (\cite{bond2016cili}), where the model is being
-%used to provide a single interlingual identifier for every concept in every
-%language. The application of ontolex-lemon to these two cases will be discussed
-%in detail at the eLex conference and in a final paper if our contribution is
-%accepted.
-%Finally, we consider the future of the OntoLex-Lemon model, which we intend to
-%continue to develop and have recently identified four areas for extension:
-%increasing support for use cases of the model in representing digitized
-%dictionaries, the use of clear and defined data categories to improve
-%interoperability, the development of a module for representing complex
-%morphological patterns and finally an extension to support the representation of
-%diachronic and etymological information within the lexicon. These developments
-%should further increase the applicability and value of the model to more users.
-
 \section{Introduction}
 
-Ontologies have become an increasingly important way of modelling domains and
+Ontologies have become an increasingly important method for modelling domains and
 representing data in a variety of forms, most notably the Semantic Web. However
 the existing standards for ontologies, most notably the Web Ontology
-Language~\cite[OWL]{mcguinness2004ow}, provide little support for the
-representing information about how a word is expressed in language, beyond a
+Language~\citep[OWL]{mcguinness2004ow}, provide little support for the
+representing information about how a word is expressed in language beyond a
 simple string. In order to close this gap, the \emph{lemon}
-Model~\cite{mccrae2012interchanging} was proposed, which created a separate
+Model~\citep{mccrae2012interchanging} was proposed, which created a separate
 lexicon that could describe how an ontological concept was lexicalized in more
 details. This builds on the paradigm of the ontology-lexicon interface, whereby
 the link between how a concept is expressed in natural language and the formal
@@ -144,13 +117,13 @@ and we will examine some of these use cases, in particular looking at the
 expanded use case of the model for representing dictionaries in the context of
 the \textbf{Add Julia and Jorge to this paper?}. Secondly, we will look at the
 use of the OntoLex model in the recently proposed Global WordNet Interlingual
-Index~\cite{vossen2016toward,bond2016cili}, whereby the model is used as a
+Index~\citep{vossen2016toward,bond2016cili}, whereby the model is used as a
 foundation for creating a truly interlingual concept index.
 
 Finally, in this paper we will also provide an outlook of the next steps that we
-aim to achieve in the model, in particular in terms of the new modules that we
-aim to create in order to address concerns raised in the community. In
-particular, we briefly sketch four modules on morphology, lexicography,
+aim to achieve for the model, in particular in terms of the new modules that we
+aim to create in order to address concerns raised in the community.
+Thus, we briefly sketch four modules on morphology, lexicography,
 etymology (and diachronicity) and lexical categories.
 
 \section{The OntoLex Community Group}
@@ -159,7 +132,7 @@ The OntoLex Community
 Group\footnote{\url{https://www.w3.org/community/ontolex/}}  was founded in
 December 2011 to support the development of a model for the representation of
 lexical information relative to ontologies. The group provided a number of tools
-for collaboration on this task including a Wiki and a public mailing list for
+for collaboration on this task including a wiki and a public mailing list for
 discussion of topics. Moreover, the group lead by the authors of this paper
 organized public telephone conference calls, of which over 70 have taken place
 between 2012 and 2016. The group aimed to develop the model firstly by
@@ -177,13 +150,13 @@ specification that was published by the W3C (\cite{cimiano2016lexicon}) along wi
 technical model files in OWL.
 
 One significant difference in the creation of this standard, in contrast to the
-processes of other standard organizations, was the degree of openness that was
-promoted in this model. The community group has over one hundred members from a
+processes of other standard organizations, was the degree of openness in the
+development of this model. The community group has over one hundred members from a
 very diverse number of institutes and this is due to the fact that admission to
 the group was conditioned only on assenting to a short agreement that
-any contributions would be open. Moreover, this many issues of the model were
-decided by open conversation or votes to decide the best way to carry the model
-format. As all of these contributions are available publicly in the form of Wiki
+any contributions would be open. Moreover, many issues of the model were
+decided by open conversation or votes to decide specific issues with the model
+format. As all of these contributions are available publicly in the form of wiki
 contributions and mailing list posts, all of which are archived on the Web and
 accessible to anyone. 
 
@@ -196,6 +169,8 @@ accessible to anyone.
 \caption{\label{fig:core}The Core Lemon OntoLex Model}
 \end{figure}
 
+Here we provide a brief summery of the Lemon OntoLex Model, for a more complete
+description please see \cite{cimiano2016lexicon}.
 The Lemon OntoLex model is based around the core module, as depicted in
 Figure~\ref{fig:core}. The primary element of this is the \emph{lexical entry}
 which represents a single word and thus collects together all morphological
@@ -204,10 +179,10 @@ possible concepts in the ontology it can refer to, which correspond to
 \emph{lexical senses} in the model. It is important to note that the actual
 meaning of a word is given by reference to an ontological concept and
 \emph{lexical senses} represent only the mapping from a word to a concept. In
-contrast to the previous lemon model, a third semantic element called the
+contrast to the previous \emph{lemon} model, a third semantic element called the
 \emph{lexical concept} was introduced that allows for a meaning to be defined
 independently of an ontology. For example, the verb `to die' may refer to
-ontological properties such as \texttt{deathDate} and \texttt{deathPlace} while
+different ontological properties such as \texttt{deathDate} and \texttt{deathPlace} while
 still referring to a single concept of \emph{Dying}. The model also supports
 some other features including marking the canonical form (lemma), whether an
 expression is a multiword expression and giving a \emph{usage} condition
@@ -226,7 +201,7 @@ In addition to the core, there are four modules defined by the specification:
         and object arguments of a property such as \texttt{A foaf:knows B}. In this
         case there are only two options based on whether the grammatical subject
         (X) refers to property's subject (A) or object (B), however more complex
-        multi-argument structures are also possible.
+        multi-argument structures are also convered.
     \item[Decomposition] The decomposition module allows for multiword lexical
         entries to be decomposed into individual words, which are also
         represented as \emph{components}. Components are allowed to be marked
@@ -237,16 +212,16 @@ In addition to the core, there are four modules defined by the specification:
         represents relationships between words at three levels: (purely)
         lexical, sense (lexico-semantic) and conceptual. These correspond
         to the levels of the model, with lexical relations being between lexical
-        entries and such do not consider the meaning of a word and only its
-        syntactic properties, similarly a conceptual relationship is between a
+        entries and such not considering the meaning of a word and only its
+        syntactic properties. Similarly a conceptual relationship is between a
         lexical conceptual and does not consider the lexical form and hence
-        language of a relation. Finally, sense relations required knowledge of
+        language of a relation. Sense relations required knowledge of
         both the word form and the meaning and translation is thus considered a
         special case of a sense relation. The module also allows technical
         modelling of a relation either as a single triple or as a
         dereferenceable entity in itself, which allows for further annotation of
         metadata about the link.
-    \item[Metadata (LIME)] The Linguistic Metadata (LIME) module adds modelling
+    \item[Metadata (Lime)] The Linguistic Metadata (Lime) module adds modelling
         for grouping sets of lexical entries together into a lexicon and
         providing simple metadata such as the number of entries, senses, etc.
         Note that as linked data is intended to be published on the Web together
@@ -328,7 +303,7 @@ wordnets\footnote{\url{https://globalwordnet.github.io/schemas}}. This format
 allows for three forms: XML, JSON and RDF, all of which can be converted without
 any loss of information. The XML format is based on the existing Lexical Markup
 Framework~\citep{francopoulo2006lexical} and in particular on the WordNet-LMF
-variant~\cite{soria2009wordnet}. Both the JSON and RDF formats are based on this
+variant~\citep{soria2009wordnet}. Both the JSON and RDF formats are based on this
 OntoLex model described in this paper, and the RDF version of this format is
 considered a limited \emph{profile} of the OntoLex model, suited particularly
 for the case of representing wordnets. The JSON version more precisely defines
@@ -354,10 +329,10 @@ relationships between senses to be further described with metadata.
 The OntoLex Community Group released its ``final report'' on the
 10\textsuperscript{th} May 2016,
 however the work of the group has not yet stopped and the group has an ambition
-to develop more models in response to critical analysis and novel uses case
+to develop more modules in response to critical analysis and novel uses case
 (such as \cite{chavula2014lemon}). In particular, the group has recently aimed
 to develop four new modules in order to further extend the applicability of the
-model.
+model:
 
 \begin{description}
     \item[Morphology] The first \emph{lemon} proposal contained a module for
@@ -368,19 +343,20 @@ model.
         accurately represent the phonological process that occur in word
         morphology. As such, under this model certain regular cases like the
         plural of `leaf' to `leaves' would be modelled as distinct morphological
-        paradigms even though it is clearly part of the normal paradigm of
-        pluralization in English. Thus the original model was made available as
+        paradigms even though it is generally considered part of the normal paradigm of
+        pluralization in English. Thus the original model was not included in
+        the Lemon OntoLex model and has been made available as
         a standalone ontology called LIAM (Lemon Inflectional Agglutinative
         Morphology)\footnote{\url{http://lemon-model.net/liam}}. There have
         since been a number of new proposals for morphology and in particular
         the group is discussing the adoption of the MMoOn Ontology of
-        \cite{MMoOn_heb}.
+        \citep{MMoOn_heb}. \textbf{TODO: More here}
     \item[Lexicography] \textbf{Jorge?}
     \item[Etymology and Diachronicity] Some authors~\citep{khan2014using,abromeit2016linking} have
         proposed using the OntoLex model to represent dictionaries of historical
-        languages, and moreover most dictionaries contain etymological
+        languages, and moreover most dictionaries contain some etymological
         information. As such, the ability of a dictionary to represent the
-        change of lexical items over time is important. As such, it has been
+        change of lexical items over time is important. Thus, it has been
         recognized that the development of a module to capture meaning of words
         over time is a key use case of the model.
     \item[Lexico-syntactic categories] The OntoLex Model follows a principle of
@@ -393,12 +369,14 @@ model.
         `adjective'}. However, the definition of standard categories greatly
         helps interoperability between resources and the LexInfo
         ontology~\citep{cimiano2011lexinfo} has been used by a number of authors
-        for this purpose. This resource, originally derived from the
+        for this
+        purpose~\citep{buitelaar2013linguistic,villegas2015parole,serasset2015dbnary}. 
+        This resource, originally derived from the
         ISOcat~\citep{kemps2008isocat} categories, is currently maintained as a
         single OWL file. As such, the group aims to re-evaluate this model and
         add establish a procedure for adding new categories to a single
-        ontology. This will still only be advisory and we still expect
-        particular communities to define their own ontologies.
+        ontology. This will still only be a suggestion for data categories
+        and we expect particular communities to define their own ontologies.
 \end{description}
 
 \section{Conclusion}
@@ -419,10 +397,8 @@ linked data based model.
 \section*{Acknowledgement} 
 
 We would like to thank all members of the OntoLex group for their contributions
-and discussion of the model.
-
-Place all acknowledgements (including those concerning research grants and
-funding) in a separate section at the end of the article.
+and discussion of the model. This work was supported in part by the Science Foundation Ireland under Grant
+Number SFI/12/RC/2289 (Insight). \textbf{CITEC?} \textbf{UPM?}
 
 \section*{References}
 
