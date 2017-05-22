@@ -47,8 +47,8 @@
 Buitelaar$^1$, Philipp Cimiano$^{3}$}
 \institute{$^1$Insight Centre for Data Analytics, National University of Ireland
 Galway\\ 
-$^2$ Ontology Engineering Group, Universidad Polit\'ecnica de Madrid, Spain\\
-$^3$ Cognitive Interaction Technology Excellence Cluster, Bielefeld
+$^2$Ontology Engineering Group, Universidad Polit\'ecnica de Madrid, Spain\\
+$^3$Cognitive Interaction Technology Excellence Cluster, Bielefeld
 University\\
 E-mail: john@mccr.ae, jbosque@fi.upm.es, jgracia@fi.upm.es,
 paul.buitelaar@insight-centre.org,
@@ -64,9 +64,9 @@ further developed in the context of the W3C OntoLex Community Group to the new
     Lemon OntoLex Model.
 We describe the development and future outlooks for this model as well
 as briefly detailing some of the current applications of the model. 
-The community group structure provided mailing lists and wikis
+This model was developed by a community group, which provided mailing lists and wikis
 for discussion of the model and eventually led to the publishing of the model as
-a W3C Report. This model has improved on the model in the representation of
+a W3C Report. This has improved on the model in the representation of
     semantics by the introduction of the lexical concept, which
 further
 extends the application domain of OntoLex-Lemon, from formal applications such
@@ -114,12 +114,12 @@ authors of this paper founded the OntoLex Community Group. This group was part
 of the World Wide Web Consortium's Business and Community group program, a new
 initiative to support the development of emerging standards on the Web. The
 results of this group's work was the publishing of an updated version of the
-model, namely the Lemon-OntoLex model.
+model, namely the OntoLex-Lemon model.
 
-Furthermore, the model has already started to be applied in a number of cases
+The new OntoLex-Lemon model has already started to be applied in a number of cases
 and we will examine some of these use cases, in particular looking at the
 expanded use case of the model for representing dictionaries in the context of
-the \textbf{Add Julia and Jorge to this paper?}. Secondly, we will look at the
+the \textbf{Julia and Jorge}. Secondly, we will look at the
 use of the OntoLex model in the recently proposed Global WordNet Interlingual
 Index~\citep{vossen2016toward,bond2016cili}, whereby the model is used as a
 foundation for creating a truly interlingual concept index.
@@ -139,7 +139,7 @@ lexical information relative to ontologies. The group provided a number of tools
 for collaboration on this task including a wiki and a public mailing list for
 discussion of topics. Moreover, the group lead by the authors of this paper
 organized public telephone conference calls, of which over 70 have taken place
-between 2012 and 2016. The group aimed to develop the model firstly by
+between 2012 and 2016. The group developed the model firstly by
 collecting relevant use
 cases\footnote{\url{https://www.w3.org/community/ontolex/wiki/Specification_of_Use_Cases}},
 and then distilling this into a set of essential
@@ -159,8 +159,7 @@ development of this model. The community group has over one hundred members from
 very diverse number of institutes and this is due to the fact that admission to
 the group was conditioned only on assenting to a short agreement that
 any contributions would be open. Moreover, many issues of the model were
-decided by open conversation or votes to decide specific issues with the model
-format. As all of these contributions are available publicly in the form of wiki
+decided by open conversation or votes and all of these contributions are available publicly in the form of wiki
 contributions and mailing list posts, all of which are archived on the Web and
 accessible to anyone. 
 
@@ -176,7 +175,7 @@ accessible to anyone.
 Here we provide a brief summery of the Lemon OntoLex Model, for a more complete
 description please see \cite{cimiano2016lexicon}.
 The Lemon OntoLex model is based around the core module, as depicted in
-Figure~\ref{fig:core}. The primary element of this is the \emph{lexical entry}
+Fig.~\ref{fig:core}. The primary element of this is the \emph{lexical entry}
 which represents a single word and thus collects together all morphological
 expressions of that word, which correspond to \emph{forms} in the model, and all
 possible concepts in the ontology it can refer to, which correspond to
@@ -216,7 +215,7 @@ In addition to the core, there are four modules defined by the specification:
         represents relationships between words at three levels: (purely)
         lexical, sense (lexico-semantic) and conceptual. These correspond
         to the levels of the model, with lexical relations being between lexical
-        entries and such not considering the meaning of a word and only its
+        entries and as such not considering the meaning of a word and only its
         syntactic properties. Similarly a conceptual relationship is between a
         lexical conceptual and does not consider the lexical form and hence
         language of a relation. Sense relations required knowledge of
@@ -312,7 +311,7 @@ OntoLex model described in this paper, and the RDF version of this format is
 considered a limited \emph{profile} of the OntoLex model, suited particularly
 for the case of representing wordnets. The JSON version more precisely defines
 its semantics by means of a JSON-LD context~\citep{sporny2014json}. An example
-of this is given in Figure~\ref{fig:json-example}, in which the term
+of this is given in Fig.~\ref{fig:json-example}, in which the term
 ``grandfather'' is defined. In this example, a number of required standard
 metadata properties are defined using widely-used vocabularies, namely Dublin
 Core~\citep{rfc2413} and
@@ -372,7 +371,8 @@ model:
         recognized that the development of a module to capture meaning of words
         over time is a key use case of the model.
     \item[Lexico-syntactic categories] The OntoLex Model follows a principle of
-        avoiding prescriptive modelling, for example allowing individual models
+        avoiding prescriptive modelling, for example allowing individual
+        applications
         to define their own categories. This is helpful as in the example
         of part-of-speech values in wordnets discussed above, where this
         approach allows the resource to define categories that may not be
@@ -386,7 +386,7 @@ model:
         This resource, originally derived from the
         ISOcat~\citep{kemps2008isocat} categories, is currently maintained as a
         single OWL file. As such, the group aims to re-evaluate this model and
-        add establish a procedure for adding new categories to a single
+        establish a procedure for adding new categories to a single
         ontology. This will still only be a suggestion for data categories
         and we expect particular communities to define their own ontologies.
 \end{description}
