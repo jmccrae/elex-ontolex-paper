@@ -236,7 +236,56 @@ In addition to the core, there are four modules defined by the specification:
 
 \subsection{Representing dictionaries with OntoLex}
 
-\textbf{Julia?}
+\textbf{[Julia, comment: starting first draft]}
+
+In the past few years, the linguistic linked data (henceforth, LLD) community 
+has showed a growing interest in the publication of dictionaries as LLD. The 
+benefits of representing lexicographic content as linked data are twofold: on 
+the one hand, LD resources are easily reused, gain in visibility and 
+accessibility at a Web scale, their content can be seamlessly aggregated with 
+content from external lexical resources (not necessarily dictionaries), as well 
+as integrated and exploited by LD-aware Natural Language Processing (PLN) tools 
+[CITE]. On the other hand, LD brings about several advantages to the modeling of the
+ macro and micro-structure of a dictionary [CITE]: moving beyond traditional 
+ cross-references, dictionary entries and each of their components are uniquely 
+ identified at a Web scale and become internally reusable thanks to URIs; 
+ hierarchical ordering of information is replaced by graph structures, where 
+ each node becomes a potential entry point to traverse the whole graph, and any 
+ relation between two elements is typed and defined in a vocabulary over which 
+ previously consensus was reached. The dictionary allows thus for an interpretation as a vast interoperable typed network of lexical elements, as opposed the more traditional list-inspired view of it. 
+
+Initiatives such as the European Network for e-Lexicography (ENeL)\footnote{\url{http://www.elexicography.eu/}}, Linked data lexicography for 
+high-end language technology application (LD4HELTA)\footnote{\url{http://www.eurekanetwork.org/project/id/9898}} or the Linked Open
+ Dictionaries (LiODi) project\footnote{\url{http://acoli.cs.uni-frankfurt.de/liodi/home.html}} foster the 
+ conversion of dictionaries to LLD as part of the the adoption of the new 
+ technological advances in the Semantic Web by digital humanities. 
+
+As \textit{lemon} and OntoLex gradually become %de-facto standards
+widespread models for the conversion of lexical resources to LLD, dictionaries 
+represented with them are easily integrable with other resources previously 
+converted to RDF without any remodelling efforts. This means, in turn, that in 
+many cases dictionaries go from a proprietary data model to one widely accepted 
+by the community. In fact, dictionary conversion to LLD was already receiving 
+much attention prior to OntoLex, and several contributions put forward 
+LD-versions of dictionaries based on \textit{lemon}. Examples of these are the 
+family of bilingual dictionaries Apertium RDF [CITE], the Monolingual K 
+Dictionary Series German dictionary [CITE], sentiment lexica [CITE], the 
+Parole-Simple 
+lexica [CITE], the Pattern Dictionary of English Verbs [CITE], the classical Al-
+Qamus dictionary [CITE] and Dbpedia lexicalizations such as Dblexipedia [CITE, 
+FOOTNOTE], just to mention a few. Some of these efforts, e.g. Dbnary [CITE], 
+called for the definition of new properties that at that time were not covered 
+by \textit{lemon} (e.g. \texttt{dbnary:isTranslationOf}) and that nowadays have 
+a counterpart in OntoLex or LexInfo. Recently, the interest is being directed 
+towards the transformation of dictionaries  which contain a variety of rich 
+annotations and which are developed both for NLP purposes and human users. These
+ include multilingual [CITE], dialectal [CITE], etymological [CITE], and ancient
+  Greek [CITE] dictionaries, among others [CITE SOME MORE]. The work on these 
+  resources and the dictionaries mentioned above has lead to the proposal of 
+  extensions and/or modifications to OntoLex to account for specific 
+  informations ranging from etymological annotations, translations of examples, 
+  groups of inflections and temporal information to the sense-subsense hierarchy in
+   a dictionary entry.
 
 \subsection{The Collaborative Interlingual Index}
 
