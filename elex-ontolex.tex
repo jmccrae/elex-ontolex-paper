@@ -58,10 +58,10 @@ cimiano@cit-ec.uni-bielefeld.de}
 \maketitle
 
 \begin{abstract}
-The lemon Model has become the primary
+    The \emph{lemon} Model has become the primary
 model for the representation of lexical data on the Semantic Web and has been
 further developed in the context of the W3C OntoLex Community Group to the new
-    Lemon OntoLex Model.
+    OntoLex-Lemon Model.
 We describe the development and future outlooks for this model as well
 as briefly detailing some of the current applications of the model. 
 This model was developed by a community group, which provided mailing lists and wikis
@@ -74,7 +74,7 @@ as question answering and semantic parsing to the representation of general
 machine-readable dictionaries, including WordNet and digitized versions of
 existing dictionaries.
 
-We look at two use cases of the Lemon OntoLex model in representing dictionaries
+We look at two use cases of the OntoLex-Lemon model in representing dictionaries
 and in the WordNet Collaborative Interlingual Index.
 Finally, we consider the future of the OntoLex-Lemon model, which we intend to
 continue to develop and have recently identified areas that
@@ -91,14 +91,14 @@ increase the applicability and value of the model to more users.
 
 Ontologies have become an increasingly important method for modelling domains and
 representing data in a variety of forms, most notably the Semantic Web. However
-the existing standards for ontologies, most notably the Web Ontology
+the existing standards for ontologies, in particular the Web Ontology
 Language~\citep[OWL]{mcguinness2004ow}, provide little support for the
 representing information about how a word is expressed in language beyond a
 simple string. In order to close this gap, the \emph{lemon}
 Model~\citep{mccrae2012interchanging} was proposed, which created a separate
 lexicon that could describe how an ontological concept was lexicalized in more
 details. This builds on the paradigm of the ontology-lexicon interface, whereby
-the link between how a concept is expressed in natural language and the formal
+how a concept is expressed in natural language and the formal
 description of the concept in the ontology is kept separated. This has several
 advantages, most notably in that by separating the ontological and the lexical
 layer we can easily switch an ontology from one language to another by changing
@@ -118,8 +118,8 @@ model, namely the OntoLex-Lemon model.
 
 The new OntoLex-Lemon model has already started to be applied in a number of cases
 and we will examine some of these use cases, in particular looking at the
-expanded use case of the model for representing dictionaries in the context of
-the \textbf{Julia and Jorge}. Secondly, we will look at the
+expanded use case of the model for representing existing dictionaries and look
+at the conversion of several existing commercial and free dictionaries. Secondly, we will look at the
 use of the OntoLex model in the recently proposed Global WordNet Interlingual
 Index~\citep{vossen2016toward,bond2016cili}, whereby the model is used as a
 foundation for creating a truly interlingual concept index.
@@ -163,18 +163,18 @@ decided by open conversation or votes and all of these contributions are availab
 contributions and mailing list posts, all of which are archived on the Web and
 accessible to anyone. 
 
-\section{The OntoLex Model}
+\section{The OntoLex-Lemon Model}
 
 \begin{figure}
     \begin{center}
 \includegraphics[width=0.8\textwidth]{LemonOntoLexCore.pdf}
     \end{center}
-\caption{\label{fig:core}The Core Lemon OntoLex Model}
+\caption{\label{fig:core}The Core OntoLex-Lemon Model}
 \end{figure}
 
-Here we provide a brief summery of the Lemon OntoLex Model, for a more complete
+Here we provide a brief summery of the OntoLex-Lemon Model, for a more complete
 description please see \cite{cimiano2016lexicon}.
-The Lemon OntoLex model is based around the core module, as depicted in
+The OntoLex-Lemon model is based around the core module, as depicted in
 Fig.~\ref{fig:core}. The primary element of this is the \emph{lexical entry}
 which represents a single word and thus collects together all morphological
 expressions of that word, which correspond to \emph{forms} in the model, and all
@@ -216,7 +216,7 @@ In addition to the core, there are four modules defined by the specification:
         lexical, sense (lexico-semantic) and conceptual. These correspond
         to the levels of the model, with lexical relations being between lexical
         entries and as such not considering the meaning of a word and only its
-        syntactic properties. Similarly a conceptual relationship is between a
+        syntactic properties. Similarly, a conceptual relationship is between a
         lexical conceptual and does not consider the lexical form and hence
         language of a relation. Sense relations required knowledge of
         both the word form and the meaning and translation is thus considered a
@@ -236,7 +236,7 @@ In addition to the core, there are four modules defined by the specification:
 
 \subsection{Representing dictionaries with OntoLex}
 
-\textbf{[Julia, comment: starting first draft]}
+%\textbf{[Julia, comment: starting first draft]}
 
 In the past few years, the linguistic linked data (henceforth, LLD) community 
 has showed a growing interest in the publication of dictionaries as LLD. The 
@@ -273,7 +273,8 @@ Dictionary Series German dictionary [CITE], sentiment lexica [CITE], the
 Parole-Simple 
 lexica [CITE], the Pattern Dictionary of English Verbs [CITE], the classical Al-
 Qamus dictionary [CITE] and Dbpedia lexicalizations such as Dblexipedia [CITE, 
-FOOTNOTE], just to mention a few. Some of these efforts, e.g. Dbnary [CITE], 
+FOOTNOTE], just to mention a few. Some of these efforts, e.g.
+Dbnary~\cite{serasset2015dbnary}, 
 called for the definition of new properties that at that time were not covered 
 by \textit{lemon} (e.g. \texttt{dbnary:isTranslationOf}) and that nowadays have 
 a counterpart in OntoLex or LexInfo. Recently, the interest is being directed 
@@ -297,7 +298,7 @@ WordNet~\citep{bond2013linking}, however they have primarily been created by the
 \emph{extend approach}, where existing synsets from Princeton WordNet have been
 translated and then new synsets are added for words which do not exist in
 English. Unfortunately, this has led to a degree of fragmentation, where certain
-concepts may be independently defined by different wordnets. In order to fix
+concepts may be independently defined by different wordnets. In order to address
 this issue, it has been proposed that all wordnets contribute to a single index
 of concepts~\citep{pease2008building}. This has recently been realized by the
 Collaborative Interlingual Index (CILI, \cite{bond2016cili}), in which all
@@ -349,7 +350,7 @@ English definition and a link to a synset already defined in the CILI.
 
 
 
-In order to, implement this it has been necessary to define a common format for
+In order to implement this, it has been necessary to define a common format for
 the definition of
 wordnets\footnote{\url{https://globalwordnet.github.io/schemas}}. This format
 allows for three forms: XML, JSON and RDF, all of which can be converted without
@@ -405,7 +406,7 @@ model:
         plural of `leaf' to `leaves' would be modelled as distinct morphological
         paradigms even though it is generally considered part of the normal paradigm of
         pluralization in English. Thus the original model was not included in
-        the Lemon OntoLex model and has been made available as
+        the OntoLex model and has been made available as
         a standalone ontology called LIAM (Lemon Inflectional Agglutinative
         Morphology)\footnote{\url{http://lemon-model.net/liam}}. There have
         since been a number of new proposals for morphology and in particular
