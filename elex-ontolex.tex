@@ -237,7 +237,6 @@ In addition to the core, there are four modules defined by the specification:
 \subsection{Representing dictionaries with OntoLex}
 
 \label{sec:dictionaries}
-%\textbf{[Julia, comment: starting first draft]}
 
 In the past few years, the linguistic linked data (henceforth, LLD) community 
 has showed a growing interest in the publication of dictionaries as LLD. The 
@@ -245,9 +244,8 @@ benefits of representing lexicographic content as linked data are twofold: on
 the one hand, LD resources are easily reused, gain in visibility and 
 accessibility at a Web scale, their content can be seamlessly aggregated with 
 content from external lexical resources (not necessarily dictionaries), as well 
-as integrated and exploited by LD-aware Natural Language Processing (PLN) tools 
-[CITE]. On the other hand, LD brings about several advantages to the modeling of the
- macro and micro-structure of a dictionary [CITE]: moving beyond traditional 
+as integrated and exploited by LD-aware Natural Language Processing (PLN) tools~\citep{klimek2015enhancing,gracia2016apertium}. On the other hand, LD brings about several advantages to the modeling of the
+ macro and micro-structure of a dictionary~\citep{bosque2016linked}: moving beyond traditional 
  cross-references, dictionary entries and each of their components are uniquely 
  identified at a Web scale and become internally reusable thanks to URIs; 
  hierarchical ordering of information is replaced by graph structures, where 
@@ -269,22 +267,19 @@ many cases dictionaries go from a proprietary data model to one widely accepted
 by the community. In fact, dictionary conversion to LLD was already receiving 
 much attention prior to OntoLex, and several contributions put forward 
 LD-versions of dictionaries based on \textit{lemon}. Examples of these are the 
-family of bilingual dictionaries Apertium RDF [CITE], the Monolingual K 
-Dictionary Series German dictionary [CITE], sentiment lexica [CITE], the 
+family of bilingual dictionaries Apertium RDF~\citep{gracia2016apertium}, the Monolingual K 
+Dictionary Series German dictionary~\citep{klimek2015enhancing}, sentiment lexica~\citep{vulcu2014generating}, the 
 Parole-Simple 
-lexica [CITE], the Pattern Dictionary of English Verbs [CITE], the classical Al-
-Qamus dictionary [CITE] and Dbpedia lexicalizations such as Dblexipedia [CITE, 
-FOOTNOTE], just to mention a few. Some of these efforts, e.g.
-Dbnary~\cite{serasset2015dbnary}, 
+lexica~\citep{villegas2015parole}, the Pattern Dictionary of English Verbs~\citep{elmaarouf2014pdev}, the classical Al-Qamus dictionary~\citep{khalfi2016classical} and DBpedia lexicalizations such as DBlexipedia ~\citep{walter2015dblexipedia}, just to mention a few. Some of these efforts, e.g.
+Dbnary~\citep{serasset2015dbnary}, 
 called for the definition of new properties that at that time were not covered 
 by \textit{lemon} (e.g. \texttt{dbnary:isTranslationOf}) and that nowadays have 
 a counterpart in OntoLex or LexInfo. Recently, the interest is being directed 
 towards the transformation of dictionaries  which contain a variety of rich 
 annotations and which are developed both for NLP purposes and human users. These
- include multilingual [CITE], dialectal [CITE], etymological [CITE], and ancient
-  Greek [CITE] dictionaries, among others [CITE SOME MORE]. The work on these 
+ include multilingual~\citep{bosque2016modelling}, dialectal~\citep{declerck2016towards}, etymological~\citep{abromeit2016linking}, and ancient Greek~\citep{khan2016representing} dictionaries, among others~\citep{declerk2015towardsENEL}. The work on these 
   resources and the dictionaries mentioned above has lead to the proposal of 
-  extensions and/or modifications to OntoLex to account for specific 
+  extensions and modifications to OntoLex to account for specific 
   informations ranging from etymological annotations, translations of examples, 
   groups of inflections and temporal information to the sense-subsense hierarchy in
    a dictionary entry.
