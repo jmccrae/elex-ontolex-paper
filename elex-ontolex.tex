@@ -236,6 +236,7 @@ In addition to the core, there are four modules defined by the specification:
 
 \subsection{Representing dictionaries with OntoLex}
 
+\label{sec:dictionaries}
 %\textbf{[Julia, comment: starting first draft]}
 
 In the past few years, the linguistic linked data (henceforth, LLD) community 
@@ -411,8 +412,17 @@ model:
         Morphology)\footnote{\url{http://lemon-model.net/liam}}. There have
         since been a number of new proposals for morphology and in particular
         the group is discussing the adoption of the MMoOn Ontology of
-        \citep{MMoOn_heb}. \textbf{TODO: More here}
-    \item[Lexicography] \textbf{Jorge?}
+        \citep{MMoOn_heb}, which enables the documentation of the
+        morphological data of any inflectional language in RDF
+    \item[Lexicography] The representation of dictionaries as described in
+        Section~\ref{sec:dictionaries} has lead to a number of issues with the
+        representation of existing dictionaries in the OntoLex
+        Model\footnote{For more details see:
+        \url{https://www.w3.org/community/ontolex/wiki/Lexicography}}. In
+        particular, these issues include associating senses with forms and
+        syntactic information such as grammatical gender, adding examples,
+        geographic information and ordering senses in terms of importance. As
+        such, extra modelling will be added for these issues.
     \item[Etymology and Diachronicity] Some authors~\citep{khan2014using,abromeit2016linking} have
         proposed using the OntoLex model to represent dictionaries of historical
         languages, and moreover most dictionaries contain some etymological
@@ -463,7 +473,9 @@ and discussion of the model. This work was supported in part by the Science Foun
 Number SFI/12/RC/2289 (Insight), by the Spanish Ministry of Economy and 
 Competitiveness through the ReTeLe Excellence Network (TIN2015-68955-REDT)
  and the Juan de la Cierva program, and by the Spanish Ministry of Education, 
- Culture and Sports through the FPU program (UPM). \textbf{CITEC?} 
+ Culture and Sports through the FPU program (UPM), and the CITEC excellence
+ initiative funded by the DFG (Deutsche
+ Forschungsgemeinschaft).
 
 \section*{References}
 
