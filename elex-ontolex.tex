@@ -86,7 +86,8 @@ of lexical data on the Semantic Web. The \emph{lemon} model has been further
 developed in the context of the W3C OntoLex community group, resulting in the
 new OntoLex-Lemon model, recently published as a W3C report. In this paper, we
 describe the development and future outlooks for this model as well as briefly
-review some of its current applications. The recent evolution of lemon into
+    review some of its current applications. The recent evolution of
+    \emph{lemon} into
 OntoLex-Lemon, in the context of the community group, led to improvements on the
 model that further extends its application domain from formal applications such
 as question answering and semantic parsing to the representation of general
@@ -114,26 +115,30 @@ the existing standards for ontologies, in particular the Web Ontology
 Language~\citep[OWL]{mcguinness2004ow}, provide little support for the
 representing information about how a word is expressed in language beyond a
 simple string. In order to close this gap, the \emph{lemon}
-Model~\citep{mccrae2012interchanging} was proposed, which created a separate
+model~\citep{mccrae2012interchanging} was proposed, which created a separate
 lexicon that could describe how an ontological concept was lexicalized in more
-details. This builds on the paradigm of the ontology-lexicon interface, whereby
+details. This builds on the paradigm of the ontology-lexicon interface, as well
+as existing models for lexicography including LMF~\cite{francopoulo2006lexical}
+and the EAGLES\footnote{\url{http://www.ilc.cnr.it/EAGLES/home.html}} and ISLES
+projects\footnote{\url{http://www.ilc.cnr.it/EAGLES96/isle/ISLE_Home_Page.htm}}, whereby
 how a concept is expressed in natural language and the formal
 description of the concept in the ontology is kept separated. This has several
 advantages, most notably in that by separating the ontological and the lexical
 layer we can easily switch an ontology from one language to another by changing
 its lexicon. 
 
-The \emph{lemon} Model was adopted by a number of
+The \emph{lemon} model was adopted by a number of
 projects~\citep{ehrmann_lrec2014_representinMultilingual,navigli2012babelnet,serasset2015dbnary,ecklekohler2015} and
 several authors have proposed modifications, improvements or
 changes~\citep{khan2014using,chavula2014lemon,bosque2016linked,gracia_lrec2014_translation}
 to the model. In order to accommodate these changes, it was decided that the
 model should be further developed under an open forum and some of the
-authors of this paper founded the OntoLex Community Group. This group was part
+authors of this paper founded the OntoLex Community
+Group\footnote{\url{http://www.w3.org/community/ontolex}}. This group was part
 of the World Wide Web Consortium's Business and Community group program, a new
 initiative to support the development of emerging standards on the Web. The
 results of this group's work was the publishing of an updated version of the
-model, namely the OntoLex-Lemon model.
+model in May 2016, namely the OntoLex-Lemon model.
 
 The new OntoLex-Lemon model has already started to be applied in a number of cases. In this paper we will examine some of these use cases,
 in particular looking at the
@@ -168,7 +173,7 @@ firstly the \emph{core} model was defined, which incorporates the basic elements
 that it was assumed that all applications of the model would use and then in the
 second stage, four extra modules were defined: Syntax and Semantics,
 Decomposition, Variation and Translation, and Metadata (Lime).
-Finally each of these models were combined and documented in a final
+Finally, these models were combined and documented in a final
 report that was published by the W3C (\cite{cimiano2016lexicon}) along with
 technical model files in OWL.
 
@@ -192,7 +197,7 @@ anyone\footnote{\url{https://lists.w3.org/Archives/Public/public-ontolex/}}.
 \caption{\label{fig:core}The Core OntoLex-Lemon Model}
 \end{figure}
 
-Here we provide a brief summary of the OntoLex-Lemon Model, for a more complete
+Here we provide a brief summary of the OntoLex-Lemon model, for a more complete
 description please see \cite{cimiano2016lexicon}.
 The OntoLex-Lemon model is based around the core module, as depicted in
 Fig.~\ref{fig:core}. The primary element of this is the \emph{lexical entry}
@@ -223,7 +228,7 @@ In addition to the core, there are four modules defined by the specification:
         transitive verb frame such as `X knows Y' can be mapped to the subject
         and object arguments of a property such as \texttt{A foaf:knows B}. In this
         case there are only two options based on whether the grammatical subject
-        (X) refers to property's subject (A) or object (B), however more complex
+        (X) refers to the property's subject (A) or object (B), however more complex
         multi-argument structures are also covered.
     \item[Decomposition] The decomposition module allows for multiword lexical
         entries to be decomposed into individual words, which are also
@@ -236,9 +241,9 @@ In addition to the core, there are four modules defined by the specification:
         lexical, sense (lexico-semantic) and conceptual. These correspond
         to the levels of the model, with lexical relations being between lexical
         entries and as such not considering the meaning of a word and only its
-        syntactic properties. Similarly, a conceptual relationship is between a
-        lexical conceptual and does not consider the lexical form and hence
-        language of a relation. Sense relations required knowledge of
+        syntactic properties. Similarly, a conceptual relationship is between
+        concepts and does not consider the lexical form and hence
+        language of a relation. Sense relations require knowledge of
         both the word form and the meaning and translation is thus considered a
         special case of a sense relation. The module also allows technical
         modelling of a relation either as a single triple or as a
@@ -246,7 +251,8 @@ In addition to the core, there are four modules defined by the specification:
         metadata about the link. This module integrates previously proposed
         extensions to \emph{lemon} such as the translation
         module~\citep{gracia_lrec2014_translation}.
-    \item[Metadata (Lime)] The Linguistic Metadata (Lime) module adds~\citep{Fiorelli13Lime} modelling
+    \item[Metadata (Lime)] The Linguistic Metadata (Lime)
+        module~\citep{Fiorelli13Lime} adds modelling
         for grouping sets of lexical entries together into a lexicon and
         providing simple metadata such as the number of entries, senses, etc.
         Note that as linked data is intended to be published on the Web together
@@ -263,18 +269,20 @@ In addition to the core, there are four modules defined by the specification:
 In the past few years, the linguistic linked data community 
 has showed a growing interest in the publication of dictionaries as linked
 data. The 
-benefits of representing lexicographic content as linked data are twofold: on 
+benefits of representing lexicographic content as linked data (LD) are twofold: on 
 the one hand, LD resources are easily reused, gain in visibility and 
 accessibility at a Web scale, their content can be seamlessly aggregated with 
 content from external lexical resources (not necessarily dictionaries), as well 
-as integrated and exploited by LD-aware Natural Language Processing (PLN) tools~\citep{klimek2015enhancing,gracia2016apertium}. On the other hand, LD brings about several advantages to the modeling of the
+as integrated and exploited by LD-aware Natural Language Processing (NLP) tools~\citep{klimek2015enhancing,gracia2016apertium}. On the other hand, LD brings about several advantages to the modeling of the
  macro and micro-structure of a dictionary~\citep{bosque2016linked}: moving beyond traditional 
  cross-references, dictionary entries and each of their components are uniquely 
  identified at a Web scale and become internally reusable thanks to URIs; 
  hierarchical ordering of information is replaced by graph structures, where 
  each node becomes a potential entry point to traverse the whole graph, and any 
  relation between two elements is typed and defined in a vocabulary over which 
- previously consensus was reached. The dictionary allows thus for an interpretation as a vast interoperable typed network of lexical elements, as opposed the more traditional list-inspired view of it. 
+ previously consensus was reached. The dictionary allows thus for an
+ interpretation as a vast interoperable typed network of lexical elements, as
+ opposed to the more traditional list-inspired view of it. 
 
 Initiatives such as the European Network for e-Lexicography (ENeL)\footnote{\url{http://www.elexicography.eu/}}, Linked data lexicography for 
 high-end language technology application (LD4HELTA)\footnote{\url{http://www.eurekanetwork.org/project/id/9898}} or the Linked Open
@@ -290,14 +298,16 @@ many cases dictionaries go from a proprietary data model to one widely accepted
 by the community. In fact, dictionary conversion to linked data was already receiving 
 much attention prior to OntoLex, and several contributions put forward 
 LD-versions of dictionaries based on \textit{lemon}. Examples of these are the 
-family of bilingual dictionaries Apertium RDF~\citep{gracia2016apertium}, the Monolingual K 
-Dictionary Series German dictionary~\citep{klimek2015enhancing}, sentiment lexica~\citep{vulcu2014generating}, the 
+family of bilingual dictionaries Apertium RDF~\citep{gracia2016apertium}, the
+Germ monolingual dictionary in K 
+Dictionary's Series~\citep{klimek2015enhancing}, sentiment lexica~\citep{vulcu2014generating}, the 
 Parole-Simple 
 lexica~\citep{villegas2015parole}, the Pattern Dictionary of English Verbs~\citep{elmaarouf2014pdev}, the classical Al-Qamus dictionary~\citep{khalfi2016classical} and DBpedia lexicalizations such as DBlexipedia ~\citep{walter2015dblexipedia}, just to mention a few. Some of these efforts, e.g.
 Dbnary~\citep{serasset2015dbnary}, 
 called for the definition of new properties that at that time were not covered 
 by \textit{lemon} (e.g. \texttt{dbnary:isTranslationOf}) and that nowadays have 
-a counterpart in OntoLex or LexInfo. Recently, the interest is being directed 
+a counterpart in OntoLex or by extension vocabularies such as
+LexInfo~\cite{cimiano2011lexinfo}. Recently, the interest is being directed 
 towards the transformation of dictionaries  which contain a variety of rich 
 annotations and which are developed both for NLP purposes and human users. These
  include multilingual~\citep{bosque2016modelling}, dialectal~\citep{declerck2016towards}, etymological~\citep{abromeit2016linking}, and ancient Greek~\citep{khan2016representing} dictionaries, among others~\citep{declerk2015towardsENEL}. The work on these 
@@ -314,7 +324,7 @@ lexicographic resource for natural language processing, but yet is only
 available for English. There have been many versions of wordnets for other
 languages and these have been collected together in the Open Multilingual
 WordNet~\citep{bond2013linking}, however they have primarily been created by the
-\emph{extend approach}, where existing synsets from Princeton WordNet have been
+\emph{extend approach}, where existing synsets from PWN have been
 translated and then new synsets are added for words which do not exist in
 English. Unfortunately, this has led to a degree of fragmentation, where certain
 concepts may be independently defined by different wordnets. In order to address
@@ -399,7 +409,7 @@ advantages, most specifically that each ILI identifier is associated with a
 unique URL, where further information about the term can be found. For example,
 for \texttt{i1234} information about this resource can be obtained at
 \url{http://ili.globalwornet.org/ili/i1234}, including the definition of the
-concept in English as well as links to the Princeton WordNet and other wordnets
+concept in English as well as links to the PWN and other wordnets
 who have contributed their links to the ILI. The URL thus allows for a stable
 identifier that can be referred to unambiguously as opposed to the current
 method of referring to offsets in release files.
@@ -430,7 +440,7 @@ model:
         Morphology)\footnote{\url{http://lemon-model.net/liam}}. There have
         since been a number of new proposals for morphology and in particular
         the group is discussing the adoption of the MMoOn Ontology of
-        \citep{MMoOn_heb}, which enables the documentation of the
+        \citep{MMoOn_heb,klimek2017propsing}, which enables the documentation of the
         morphological data of any inflectional language in RDF
 %    \item[Lexicography] The representation of dictionaries as described in
 %        Section~\ref{sec:dictionaries} has lead to a number of issues with the
@@ -444,7 +454,8 @@ model:
     \item[Lexicography] Previous experiences in the representation of
 dictionaries using OntoLex-Lemon, as the ones described in
 Section~\ref{sec:dictionaries}, have led to a number of issues\footnote{For more
-details see: \url{https://www.w3.org/community/ontolex/wiki/Lexicography}}. In
+details see:
+        \url{https://www.w3.org/community/ontolex/wiki/Lexicography}}~\cite{bosquegil2017towards}. In
 particular, these issues include associating senses with forms and syntactic
 information such as grammatical gender, adding examples, geographic information
 and ordering senses in terms of importance, along other aspects of dictionary
@@ -456,21 +467,21 @@ will address structures and annotations commonly found in lexicography. Such a
 module is intended to be compatible with other modules in OntoLex (e.g.,
 Etymology and Diachronicity) and should constitute a viable mechanism for
 lexicographers in the development of dictionaries as linked data.
-    \item[Etymology and Diachronicity] Some authors~\citep{khan2014using,abromeit2016linking} have
+    \item[Etymology and Diachronicity] Some
+        authors~\citep{khan2014using,abromeit2016linking,khan2017challenges} have
         proposed using the OntoLex model to represent dictionaries of historical
-        languages, and moreover most dictionaries contain some etymological
+        languages, and moreover many dictionaries contain some etymological
         information. As such, the ability of a dictionary to represent the
         change of lexical items over time is important. Thus, it has been
         recognized that the development of a module to capture meaning of words
         over time is a key use case of the model.
-    \item[Lexico-syntactic categories] The OntoLex Model follows a principle of
+    \item[Lexico-syntactic categories] The OntoLex model follows a principle of
         avoiding prescriptive modelling, for example allowing individual
         applications
         to define their own categories. This is helpful as in the example
         of part-of-speech values in wordnets discussed above, where this
         approach allows the resource to define categories that may not be
-        accepted by other lexicographers\footnote{In particular, Princeton
-        WordNet defines `adjective satellite' as a distinct category to
+        accepted by other lexicographers\footnote{In particular, PWN defines `adjective satellite' as a distinct category to
         `adjective'}. However, the definition of standard categories greatly
         helps interoperability between resources and the LexInfo
         ontology~\citep{cimiano2011lexinfo} has been used by a number of authors
@@ -486,7 +497,7 @@ lexicographers in the development of dictionaries as linked data.
 
 \section{Conclusion}
 
-The OntoLex Model has been developed under an open process and as such
+The OntoLex model has been developed under an open process and as such
 represents on the most significant open models for the representation of
 electronic lexicographic resources. While the model as proposed has remained
 close to the proposal of \cite{mccrae2012interchanging}, it has also
